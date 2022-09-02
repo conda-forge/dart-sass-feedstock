@@ -9,7 +9,7 @@ dart run grinder pkg-standalone-windows-x64
 cd build
 tar -xf dart-sass-%PKG_VERSION%-windows-x64.zip
 cd dart-sass
-COPY sass.bat %LIBRARY_BIN%\sass.bat
+:: COPY sass.bat %LIBRARY_BIN%\sass.bat
 
 robocopy /E "src" "%LIBRARY_BIN%\src"
 if %ERRORLEVEL% GEQ 8 exit 1
