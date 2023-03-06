@@ -1,5 +1,5 @@
 {% set name = "dart-sass" %}
-{% set version = "1.54.4" %}
+{% set version = "1.58.3" %}
 
 package:
   name: {{ name }}
@@ -7,10 +7,10 @@ package:
 
 source:
   - url: https://github.com/sass/dart-sass/archive/refs/tags/{{ version }}.tar.gz                                      # [not osx or not arm64]
-    sha256: 669a52ec200a71141886793a2d98549ba7ac9c3da7479f1b05a0603d51e14cac                                           # [not osx or not arm64]
+    sha256: 4facd10e87ba724ee80ad68ef117b19793ed383247027fd171db19d2deec8a06  # [not osx or not arm64]
   # binary repack for osx-arm64 due to compiling issues
   - url: https://github.com/sass/dart-sass/releases/download/{{ version }}/dart-sass-{{ version }}-macos-arm64.tar.gz  # [osx and arm64]
-    sha256: 38a68a04224cd0b107a405317caae29aeac43ff884acdf12ce36630ad6991b3e                                           # [osx and arm64]
+    sha256: b84fa8af33158d9a46bb3b32b720092981aafeecb4bea1d444a22893aede5c8a  # [osx and arm64]
 
 build:
   number: 0
@@ -26,7 +26,8 @@ test:
   files:
     - test.sass
   commands:
-    - sass test.sass output.css
+    - sass test.sass output.css  # [unix]
+    - call sass test.sass output.css  # [win]
 
 about:
   home: https://sass-lang.com/dart-sass
