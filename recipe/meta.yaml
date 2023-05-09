@@ -13,7 +13,7 @@ source:
     sha256: b84fa8af33158d9a46bb3b32b720092981aafeecb4bea1d444a22893aede5c8a  # [osx and arm64]
 
 build:
-  number: 0
+  number: 1
   binary_relocation: False
   # we don't have dart-sdk on ppc64le, so we can't build this.
   skip: True   # [ppc64le]
