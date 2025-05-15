@@ -1,19 +1,19 @@
 {% set name = "dart-sass" %}
-{% set version = "1.58.3" %}
+{% set version = "1.59.1" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  - url: https://github.com/sass/dart-sass/archive/refs/tags/{{ version }}.tar.gz                                      # [not osx or not arm64]
-    sha256: 4facd10e87ba724ee80ad68ef117b19793ed383247027fd171db19d2deec8a06  # [not osx or not arm64]
+  - url: https://github.com/sass/dart-sass/archive/refs/tags/{{ version }}.tar.gz  # [not osx or not arm64]
+    sha256: d81c46a6a1e2ef0e36d2d2636839489d6776fcea86a9c06acdcb53b54e8db906  # [not osx or not arm64]
   # binary repack for osx-arm64 due to compiling issues
   - url: https://github.com/sass/dart-sass/releases/download/{{ version }}/dart-sass-{{ version }}-macos-arm64.tar.gz  # [osx and arm64]
-    sha256: b84fa8af33158d9a46bb3b32b720092981aafeecb4bea1d444a22893aede5c8a  # [osx and arm64]
+    sha256: 20178e0ea4d147f07758ae0bd839dd93d9d4a10a1dcf1a462ee5edd3612f3d9b  # [osx and arm64]
 
 build:
-  number: 1
+  number: 0
   binary_relocation: False
   # we don't have dart-sdk on ppc64le, so we can't build this.
   skip: True   # [ppc64le]
@@ -31,6 +31,8 @@ test:
 
 about:
   home: https://sass-lang.com/dart-sass
+  dev_url: https://github.com/sass/dart-sass/
+  doc_url: https://sass-lang.com/dart-sass
   license: MIT
   license_file:
     - LICENSE           # [not arm64]
