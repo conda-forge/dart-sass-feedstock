@@ -1,5 +1,5 @@
 {% set name = "dart-sass" %}
-{% set version = "1.59.1" %}
+{% set version = "1.94.0" %}
 
 package:
   name: {{ name }}
@@ -7,16 +7,16 @@ package:
 
 source:
   - url: https://github.com/sass/dart-sass/archive/refs/tags/{{ version }}.tar.gz  # [not osx or not arm64]
-    sha256: d81c46a6a1e2ef0e36d2d2636839489d6776fcea86a9c06acdcb53b54e8db906  # [not osx or not arm64]
+    sha256: f0d8009cc5447b2f456781642e5e93b656f3badf87a406644206fa6a9b5fac80  # [not osx or not arm64]
   # binary repack for osx-arm64 due to compiling issues
   - url: https://github.com/sass/dart-sass/releases/download/{{ version }}/dart-sass-{{ version }}-macos-arm64.tar.gz  # [osx and arm64]
-    sha256: 20178e0ea4d147f07758ae0bd839dd93d9d4a10a1dcf1a462ee5edd3612f3d9b  # [osx and arm64]
+    sha256: 7dfb0723b318d87251883f1b4b59d84eaa003a0f615f4a12a6c8215b1cba0428  # [osx and arm64]
 
 build:
   number: 0
-  binary_relocation: False
+  binary_relocation: false
   # we don't have dart-sdk on ppc64le, so we can't build this.
-  skip: True   # [ppc64le]
+  skip: true  # [ppc64le]
 
 requirements:
   host:
