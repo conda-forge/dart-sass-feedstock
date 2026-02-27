@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -eux
 
-if [ "${build_platform}" == "osx-arm64" ]; then
+if [ "${TARGET_PLATFORM}" == "osx-arm64" ]; then
     # binary repack on Apple Silicon because build machines only support that via cross compiling right now
     mkdir -p ${PREFIX}/bin
     cp sass ${PREFIX}/bin
