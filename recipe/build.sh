@@ -8,6 +8,6 @@ if [ "${SUBDIR}" == "osx-arm64" ]; then
     cp -r src ${PREFIX}/bin
 else
     dart pub get
-    dart dart run grinder protobuf
+    dart run grinder protobuf
     dart compile exe --define="version=${PKG_VERSION}" bin/sass.dart -o ${PREFIX}/bin/sass
 fi
