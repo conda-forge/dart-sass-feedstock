@@ -26,7 +26,9 @@ build:
 requirements:
   host:
     - if: not arm64
-      then: dart-sdk
+      then:
+        - dart-sdk
+        - buf
 
 tests:
   - package_contents:
