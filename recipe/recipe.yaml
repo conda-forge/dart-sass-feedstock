@@ -25,7 +25,7 @@ build:
 
 requirements:
   host:
-    - if: not arm64
+    - if: not (osx and arm64)
       then:
         - dart-sdk
         - buf
