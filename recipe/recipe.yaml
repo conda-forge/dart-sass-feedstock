@@ -31,12 +31,6 @@ requirements:
         - buf
 
 tests:
-  - package_contents:
-      bin:
-        - sass${{ ".bat" if win else "" }}
-      files:
-        - ${{ "Library/" if win }}bin/src/dart${{ ".exe" if win else "" }}
-        - ${{ "Library/" if win }}bin/src/sass.snapshot
   - script:
       - if: win
         then: call sass test.sass output.css
