@@ -32,9 +32,8 @@ requirements:
 
 tests:
   - script:
-      - if: win
-        then: call sass test.sass output.css
-        else: sass test.sass output.css
+      - sass --version
+      - sass test.sass
     files:
       recipe:
         - test.sass
