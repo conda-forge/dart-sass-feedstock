@@ -1,9 +1,8 @@
 context:
-  name: dart-sass
   version: 1.97.3
 
 package:
-  name: ${{ name|lower }}
+  name: dart-sass
   version: ${{ version }}
 
 source:
