@@ -6,13 +6,8 @@ package:
   version: ${{ version }}
 
 source:
-  - if: osx and arm64
-    then:
-      url: https://github.com/sass/dart-sass/releases/download/${{ version }}/dart-sass-${{ version }}-macos-arm64.tar.gz
-      sha256: 7a477af01b77c69fbf38335169e5d181b5193c8588c2400d8e3b806883e267b0
-    else:
-      url: https://github.com/sass/dart-sass/archive/refs/tags/${{ version }}.tar.gz
-      sha256: 2eab6aebaba4e095e67b970baf8b0bdb4b934be17fdee1ca5d5da6a490b5517a
+  url: https://github.com/sass/dart-sass/archive/refs/tags/${{ version }}.tar.gz
+  sha256: 2eab6aebaba4e095e67b970baf8b0bdb4b934be17fdee1ca5d5da6a490b5517a
 
 build:
   number: 0
@@ -24,10 +19,8 @@ build:
 
 requirements:
   host:
-    - if: not (osx and arm64)
-      then:
-        - dart-sdk
-        - buf
+    - dart-sdk
+    - buf
 
 tests:
   - script:
@@ -41,9 +34,7 @@ about:
   homepage: https://sass-lang.com/dart-sass
   license: MIT
   license_file:
-    - if: osx and arm64
-      then: src/LICENSE
-      else: LICENSE
+    - LICENSE
   summary: Dart implementation of Sass. Sass makes CSS fun again.
   documentation: https://sass-lang.com/dart-sass
   repository: https://github.com/sass/dart-sass
