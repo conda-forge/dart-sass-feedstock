@@ -197,6 +197,3 @@ Feedstock Maintainers
 * [@msarahan](https://github.com/msarahan/)
 * [@munechika-koyo](https://github.com/munechika-koyo/)
 
-
-<!-- dummy commit to enable rerendering -->
-
