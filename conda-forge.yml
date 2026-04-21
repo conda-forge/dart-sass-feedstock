@@ -13,3 +13,6 @@ provider:
 test: native_and_emulated
 bot:
   automerge: true
+  version_updates:
+    allowed_tag_globs: 
+      - '[0-9]*'
