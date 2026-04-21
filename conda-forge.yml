@@ -15,4 +15,4 @@ bot:
   automerge: true
   version_updates:
     sources:
-      - GithubReleases
+      - githubreleases
