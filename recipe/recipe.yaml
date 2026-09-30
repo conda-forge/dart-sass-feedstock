@@ -1,5 +1,5 @@
 context:
-  version: "1.105.0"
+  version: "1.105.1"
 
 package:
   name: dart-sass
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/sass/dart-sass/archive/refs/tags/${{ version }}.tar.gz
-  sha256: cc526648540511381187af2e71d7c831e7ad2ba27d8fb0d0d882e78053a4df79
+  sha256: 0744079d7712afa814ad6a8fb61bd4006a5902cb6746d92b13fb0d38234547c4
 
 build:
   number: 0
